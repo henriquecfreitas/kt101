@@ -1,0 +1,18 @@
+# Consultas
+type Query {
+
+    # Retorna todos os usuários do sistema
+    users:[User]
+
+    # Retorna um usuário específico, a partir de seu ID
+    user(
+        # ID do usuário buscado
+        id: ID
+    ):User
+
+    # Retorna um usuário específico, a partir de seu email
+    userByEmail(
+        # Email do usuário buscado
+        email: String
+    ):User
+}

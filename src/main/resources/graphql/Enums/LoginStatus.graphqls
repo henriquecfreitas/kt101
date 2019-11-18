@@ -1,0 +1,9 @@
+# Enumerador de estado da resposta do login.
+enum LoginStatus {
+    # Login bem sucedido
+    SUCCESS
+    # Usuario ou senha inválidos
+    INVALID_CREDENTIALS
+    # Erro interno na rotina de login
+    ERROR
+}

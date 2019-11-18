@@ -1,0 +1,7 @@
+# Modelo de resposta da requisição de login,
+type LoginResponse {
+    # Indicador de retorno da requisição
+    status: LoginStatus,
+    # Token de autenticação JWT
+    token: String
+}

@@ -1,0 +1,51 @@
+# Funções
+type Mutation {
+
+    testInsert(qtd:Int):String
+
+    # Registra um novo usuário.
+    # Retorna objeto com estado da requisição e token de autenticação do usuário criado.
+    register(
+        # Email do usuário
+        email: String,
+        # Senha do usuário
+        password: String
+    ):LoginResponse
+
+    # Rotina de login.
+    # Retorna objeto com estado da requisição e token de autenticação.
+    login(
+        # Email do usuário
+        email: String,
+        # Senha do usuário
+        password: String
+    ):LoginResponse
+
+    # Altera o grupo de acesso de um usuário, localizado a partir de seu ID
+    updateUserRole(
+        # ID do usuário que será alterado
+        id: ID!,
+        # Novo grupo de acesso do usuário
+        role: Role!
+    ):User
+
+
+    # Abdica o cargo do usuário de 'ADMIN', tornando-o 'DEVELOPER'
+    resignAdmin(
+        # Senha do usuário
+        password: String
+    ): User
+
+    # Abdica o cargo do usuário de 'DEVELOPER' ou superior, tornando-o 'USER'
+    resignDeveloper(
+        # Senha do usuário
+        password: String
+    ): User
+
+    # Remove a conta do usuário logado
+    dropAccount(
+        # Senha do usuário
+        password: String
+    ): RequestStatus
+
+}

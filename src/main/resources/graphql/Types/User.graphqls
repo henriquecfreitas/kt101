@@ -1,0 +1,11 @@
+# Modelo genérico de usuário
+type User {
+    # Chave primária do usuário, gerada automáticamente.
+    id: ID!,
+    # Endereço de email do usuário
+    email: String,
+    # Senha do usuário
+    password: String,
+    # Grupo de acesso do usuário.
+    role: Role
+}

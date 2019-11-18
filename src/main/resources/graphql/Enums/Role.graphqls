@@ -1,0 +1,10 @@
+# Grupo de acesso do usuário.
+# Propriedade usada para restringir ou liberar o acesso a rotas da API.
+enum Role {
+    # Valor padrão. Grupo para usuários convencionais, acesso apenas a rotas do sistema
+    USER
+    # Acesso liberado para rotas do GraphQL e permissão para alterar o grupo de outros usuários
+    ADMIN
+    # Acesso liberado para rotas do GraphQL
+    DEVELOPER
+}

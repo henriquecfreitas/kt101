@@ -1,0 +1,7 @@
+# Enumerador de estado de resposta.
+enum RequestStatus {
+    # Requisicao bem sucedida
+    SUCCESS
+    # Erro interno na rotina executada
+    ERROR
+}
